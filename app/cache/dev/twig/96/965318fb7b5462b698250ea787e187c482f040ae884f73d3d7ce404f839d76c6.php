@@ -69,10 +69,10 @@ class __TwigTemplate_063bbad590d8432e8d4b889a33d730acaa231ff0002c75e0b1838021e1d
             // line 25
             echo twig_escape_filter($this->env, $this->getAttribute($context["m"], "langue", array()), "html", null, true);
             echo "</td>
-        <td>";
+        <td><img src=\"";
             // line 26
-            echo twig_escape_filter($this->env, $this->getAttribute($context["m"], "image", array()), "html", null, true);
-            echo "</td>
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($this->getAttribute($context["m"], "image", array()), "AssetPath", array())), "html", null, true);
+            echo "\" width=\"300\" height=\"150\"></td>
         <td><a href=\"";
             // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("DeleteVille", array("id" => $this->getAttribute($context["m"], "id", array()))), "html", null, true);
@@ -140,7 +140,7 @@ class __TwigTemplate_063bbad590d8432e8d4b889a33d730acaa231ff0002c75e0b1838021e1d
 /*         <td>{{m.description}}</td>*/
 /*         <td>{{m.type}}</td>*/
 /*          <td>{{m.langue}}</td>*/
-/*         <td>{{m.image}}</td>*/
+/*         <td><img src="{{ asset(m.image.AssetPath)}}" width="300" height="150"></td>*/
 /*         <td><a href="{{path("DeleteVille",{'id':m.id})}}"> supprimer </a></td>*/
 /*         <td><a href="{{path("UpdateVille",{'id':m.id})}}"> modifier </a></td>*/
 /*         <td><a href="{{path("Afficherdetails",{'id':m.id})}}"> afficher details </a></td>*/

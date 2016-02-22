@@ -43,10 +43,11 @@ class Ville {
      */
     private $langue;
 
-    /**
-     *@ORM\Column(type="string",length=25)
+   /**
+     * @ORM\OneToOne(targetEntity="GV\ForumBundle\Entity\Image", cascade={"persist","remove"})
      */
     private $image;
+
 
     
    
@@ -113,17 +114,34 @@ class Ville {
         return $this->langue;
     }
 
-    function getImage() {
-        return $this->image;
-    }
+
 
     function setLangue($langue) {
         $this->langue = $langue;
     }
-
-    function setImage($image) {
+         /**
+     * Set image
+     *
+     * @param \GV\ForumBundle\Entity\Image $image
+     * @return Poste
+     */
+    public function setImage(\GV\ForumBundle\Entity\Image $image)
+    {
         $this->image = $image;
+
+        return $this;
     }
+
+    /**
+     * Get image
+     *
+     * @return \GV\ForumBundle\Entity\Image 
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
 
 
    

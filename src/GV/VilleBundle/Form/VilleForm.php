@@ -29,7 +29,7 @@ class VilleForm  extends AbstractType {
               ->add('description', 'textarea')
               ->add('type')
               ->add('langue')
-              ->add('image')
+              ->add('image', new \GV\ForumBundle\Form\ImageForm())
              ;
               
     }

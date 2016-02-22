@@ -16,7 +16,9 @@ class __TwigTemplate_fd7f2e459791f624a3ce77daccf034708741cfff342a625a26dd61b636d
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 2
-        echo "<form method=\"post\" action=''>
+        echo "<form ";
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'enctype');
+        echo " method=\"post\" action=''>
 <table>
 
 <tr>
@@ -118,11 +120,11 @@ class __TwigTemplate_fd7f2e459791f624a3ce77daccf034708741cfff342a625a26dd61b636d
 
     public function getDebugInfo()
     {
-        return array (  106 => 49,  97 => 46,  94 => 45,  90 => 44,  85 => 42,  76 => 36,  69 => 32,  61 => 27,  54 => 23,  46 => 18,  39 => 14,  32 => 10,  26 => 7,  19 => 2,);
+        return array (  108 => 49,  99 => 46,  96 => 45,  92 => 44,  87 => 42,  78 => 36,  71 => 32,  63 => 27,  56 => 23,  48 => 18,  41 => 14,  34 => 10,  28 => 7,  19 => 2,);
     }
 }
 /* {# empty Twig template #}*/
-/* <form method="post" action=''>*/
+/* <form {{ form_enctype(f) }} method="post" action=''>*/
 /* <table>*/
 /* */
 /* <tr>*/

@@ -23,7 +23,7 @@
         <td>{{m.description}}</td>
         <td>{{m.type}}</td>
          <td>{{m.langue}}</td>
-        <td>{{m.image}}</td>
+        <td><img src="{{ asset(m.image.AssetPath)}}" width="300" height="150"></td>
         <td><a href="{{path("DeleteVille",{'id':m.id})}}"> supprimer </a></td>
         <td><a href="{{path("UpdateVille",{'id':m.id})}}"> modifier </a></td>
         <td><a href="{{path("Afficherdetails",{'id':m.id})}}"> afficher details </a></td>
