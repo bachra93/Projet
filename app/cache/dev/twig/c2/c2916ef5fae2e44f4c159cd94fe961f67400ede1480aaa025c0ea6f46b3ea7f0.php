@@ -35,38 +35,55 @@ class __TwigTemplate_7bc213435396019bbdd49c803902d85768422c35c622b9803fcf19974f4
         // line 5
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'enctype');
         echo ">
-        <p align=\"center\">";
+        <div align=\"center\" class=\"span10\">";
         // line 6
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "id", array()), 'widget', array("attr" => array("style" => "display:none", "value" => "6")));
-        echo "</p>
-       
-        <p align=\"center\"> ";
+        echo "</div>
+        <h2>Titre </h2>
+        <div class=\"span10\" id=\"f1\"> ";
         // line 8
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "Titre", array()), 'widget', array("attr" => array("class" => "form-control")));
-        echo "</p>
-       <p class=\"span12\"  >
+        echo "</div>
+       <div class=\"span12\" id=\"f3\" >
  ";
         // line 10
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "Contenu", array()), 'widget');
         echo "
-       </p>
+       </div>
     
         <p align=\"center\">";
         // line 13
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "date_published", array()), 'widget', array("attr" => array("style" => "display:none")));
         echo "</p>
-     
-    <p align=\"center\">sqdqsd";
-        // line 15
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "image", array()), "name", array()), 'widget', array("attr" => array("class" => "form-control")));
-        echo "</p>
-     <p align=\"center\">sqdqsd";
+      <h2>Titre de l'image </h2>
+      
+    <div class=\"span10\" id=\"f1\">";
         // line 16
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "image", array()), "file", array()), 'widget');
-        echo "</p>
- 
-      ";
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "image", array()), "name", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "</div>
+    <h2>Selectionner Votre Image </h2>
+     <div class=\"span10\" id=\"f1\">";
         // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "image", array()), "file", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "</div>
+      <h2>Selectionner Votre Video </h2>
+        <div class=\"span10\" id=\"f1\">";
+        // line 20
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "v", array()), "file", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "</div>
+          <h2>Titre du video </h2>
+        <div class=\"span10\" id=\"f1\">";
+        // line 22
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "v", array()), "name", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "</div>
+           <div class=\"btn\"  id=\"f2\">";
+        // line 23
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "Envoyer", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "</div>
+ 
+     
+      ";
+        // line 26
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'form');
         echo "
 
@@ -76,10 +93,10 @@ class __TwigTemplate_7bc213435396019bbdd49c803902d85768422c35c622b9803fcf19974f4
     ";
     }
 
-    // line 24
+    // line 32
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 25
+        // line 33
         echo " <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/gvforum/ckeditor/ckeditor.js"), "html", null, true);
         echo " \"> </script>
@@ -98,7 +115,7 @@ class __TwigTemplate_7bc213435396019bbdd49c803902d85768422c35c622b9803fcf19974f4
 
     public function getDebugInfo()
     {
-        return array (  83 => 25,  80 => 24,  70 => 18,  65 => 16,  61 => 15,  56 => 13,  50 => 10,  45 => 8,  40 => 6,  36 => 5,  32 => 3,  29 => 2,  11 => 1,);
+        return array (  100 => 33,  97 => 32,  87 => 26,  81 => 23,  77 => 22,  72 => 20,  67 => 18,  62 => 16,  56 => 13,  50 => 10,  45 => 8,  40 => 6,  36 => 5,  32 => 3,  29 => 2,  11 => 1,);
     }
 }
 /*     {% extends '::base.html.twig' %}*/
@@ -106,18 +123,26 @@ class __TwigTemplate_7bc213435396019bbdd49c803902d85768422c35c622b9803fcf19974f4
 /* <div id="h">Ajouter un Poste </div>*/
 /* */
 /*     <form action='' method="post"  {{ form_enctype(f) }}>*/
-/*         <p align="center">{{ form_widget(f.id,{'attr': {'style': 'display:none','value':'6'}})}}</p>*/
-/*        */
-/*         <p align="center"> {{ form_widget(f.Titre, { 'attr': {'class': 'form-control'} }) }}</p>*/
-/*        <p class="span12"  >*/
+/*         <div align="center" class="span10">{{ form_widget(f.id,{'attr': {'style': 'display:none','value':'6'}})}}</div>*/
+/*         <h2>Titre </h2>*/
+/*         <div class="span10" id="f1"> {{ form_widget(f.Titre, { 'attr': {'class': 'form-control'} }) }}</div>*/
+/*        <div class="span12" id="f3" >*/
 /*  {{ form_widget(f.Contenu) }}*/
-/*        </p>*/
+/*        </div>*/
 /*     */
 /*         <p align="center">{{ form_widget(f.date_published ,{'attr': {'style': 'display:none'}}) }}</p>*/
-/*      */
-/*     <p align="center">sqdqsd{{ form_widget(f.image.name, { 'attr': {'class': 'form-control'} }) }}</p>*/
-/*      <p align="center">sqdqsd{{ form_widget(f.image.file) }}</p>*/
+/*       <h2>Titre de l'image </h2>*/
+/*       */
+/*     <div class="span10" id="f1">{{ form_widget(f.image.name, { 'attr': {'class': 'form-control'} }) }}</div>*/
+/*     <h2>Selectionner Votre Image </h2>*/
+/*      <div class="span10" id="f1">{{ form_widget(f.image.file, { 'attr': {'class': 'form-control'} }) }}</div>*/
+/*       <h2>Selectionner Votre Video </h2>*/
+/*         <div class="span10" id="f1">{{ form_widget(f.v.file, { 'attr': {'class': 'form-control'} }) }}</div>*/
+/*           <h2>Titre du video </h2>*/
+/*         <div class="span10" id="f1">{{ form_widget(f.v.name, { 'attr': {'class': 'form-control'} }) }}</div>*/
+/*            <div class="btn"  id="f2">{{ form_widget(f.Envoyer, { 'attr': {'class': 'form-control'} }) }}</div>*/
 /*  */
+/*      */
 /*       {{ form(f) }}*/
 /* */
 /*     */

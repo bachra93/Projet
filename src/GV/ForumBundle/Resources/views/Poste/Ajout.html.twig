@@ -3,18 +3,26 @@
 <div id="h">Ajouter un Poste </div>
 
     <form action='' method="post"  {{ form_enctype(f) }}>
-        <p align="center">{{ form_widget(f.id,{'attr': {'style': 'display:none','value':'6'}})}}</p>
-       
-        <p align="center"> {{ form_widget(f.Titre, { 'attr': {'class': 'form-control'} }) }}</p>
-       <p class="span12"  >
+        <div align="center" class="span10">{{ form_widget(f.id,{'attr': {'style': 'display:none','value':'6'}})}}</div>
+        <h2>Titre </h2>
+        <div class="span10" id="f1"> {{ form_widget(f.Titre, { 'attr': {'class': 'form-control'} }) }}</div>
+       <div class="span12" id="f3" >
  {{ form_widget(f.Contenu) }}
-       </p>
+       </div>
     
         <p align="center">{{ form_widget(f.date_published ,{'attr': {'style': 'display:none'}}) }}</p>
-     
-    <p align="center">sqdqsd{{ form_widget(f.image.name, { 'attr': {'class': 'form-control'} }) }}</p>
-     <p align="center">sqdqsd{{ form_widget(f.image.file) }}</p>
+      <h2>Titre de l'image </h2>
+      
+    <div class="span10" id="f1">{{ form_widget(f.image.name, { 'attr': {'class': 'form-control'} }) }}</div>
+    <h2>Selectionner Votre Image </h2>
+     <div class="span10" id="f1">{{ form_widget(f.image.file, { 'attr': {'class': 'form-control'} }) }}</div>
+      <h2>Selectionner Votre Video </h2>
+        <div class="span10" id="f1">{{ form_widget(f.v.file, { 'attr': {'class': 'form-control'} }) }}</div>
+          <h2>Titre du video </h2>
+        <div class="span10" id="f1">{{ form_widget(f.v.name, { 'attr': {'class': 'form-control'} }) }}</div>
+           <div class="btn"  id="f2">{{ form_widget(f.Envoyer, { 'attr': {'class': 'form-control'} }) }}</div>
  
+     
       {{ form(f) }}
 
     

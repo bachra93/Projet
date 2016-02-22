@@ -24,6 +24,7 @@ class PosteForm extends AbstractType{
                  ->add('Contenu','textarea',array('attr' =>array('class'=>'ckeditor')))
                 ->add('date_published',null,array('attr'=>array ('style'=> 'display:none')))
                  ->add('image', new ImageForm())
+                ->add('v',new  VideoType())
                  ->add('Envoyer','submit')
             ;
            

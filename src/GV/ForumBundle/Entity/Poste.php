@@ -29,8 +29,15 @@ class Poste {
     
    /**
      * @ORM\OneToOne(targetEntity="GV\ForumBundle\Entity\Image", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=true, onDelete="CASCADE")
      */
     private $image;
+    
+   /**
+     * @ORM\OneToOne(targetEntity="GV\ForumBundle\Entity\Video", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
+     */
+    private $v;
 
     
     function getId() {
@@ -87,6 +94,20 @@ class Poste {
     {
         return $this->image;
     }
+      
+   public function setV(\GV\ForumBundle\Entity\Video $v)
+    {
+        $this->v = $v;
+
+        return $this;
+    }
+
+ 
+    public function getV()
+    {
+        return $this->v;
+    }
+    
 
 
 

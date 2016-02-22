@@ -43,15 +43,23 @@ class __TwigTemplate_fa8e0dd250831324ca78ed558b11aa7ccc0543a116a4a1ecec61a22e9ee
     <img src=\"";
         // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "image", array()), "AssetPath", array())), "html", null, true);
-        echo "\" width=\"300\" height=\"150\">
+        echo "\" >
+   
     <div class=\"item-overlay top\"></div>
 </div>
+    <div id=\"tt\" >
+        <video id=\"video1\" width=\"500\" src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl(("uploads/" . $this->getAttribute($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "v", array()), "path", array()))), "html", null, true);
+        echo "\"controls ></video>
+    </div>
     <p align=\"center\">
     Conteu :";
-        // line 14
+        // line 18
         echo $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "Contenu", array());
         echo " 
 </p>
+
 
 <table border=2>
     <tr>
@@ -69,29 +77,29 @@ class __TwigTemplate_fa8e0dd250831324ca78ed558b11aa7ccc0543a116a4a1ecec61a22e9ee
 
      
 ";
-        // line 32
+        // line 37
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["entities"]) ? $context["entities"] : $this->getContext($context, "entities")));
         foreach ($context['_seq'] as $context["_key"] => $context["poste"]) {
-            // line 33
+            // line 38
             echo "
     <td>   ";
-            // line 34
+            // line 39
             echo $this->getAttribute($context["poste"], "body", array());
             echo " </td>
      
     
    
     <td> ";
-            // line 38
+            // line 43
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["poste"], "date_p", array()), "Y-m-d H:i:s"), "html", null, true);
             echo " </td>
     <td><a class=\"btn2\"  href=\"";
-            // line 39
+            // line 44
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("Modifier_commentaire", array("id" => $this->getAttribute($context["poste"], "id", array()))), "html", null, true);
             echo " \">Modifier </a></td>
     <td><a class=\"btn2\"  href=\"";
-            // line 40
+            // line 45
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("Supprimer_commentaire", array("id" => $this->getAttribute($context["poste"], "id", array()))), "html", null, true);
             echo " \">Supprimer </a></td>
    
@@ -105,14 +113,14 @@ class __TwigTemplate_fa8e0dd250831324ca78ed558b11aa7ccc0543a116a4a1ecec61a22e9ee
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['poste'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 53
         echo " 
   <td><a class=\"btn\"  href=\"";
-        // line 49
+        // line 54
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("Ajouter_commentaire", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
         echo " \">Replay </a></td>
     <td><a class=\"btn\"  href=\"";
-        // line 50
+        // line 55
         echo $this->env->getExtension('routing')->getPath("Liste_poste");
         echo " \">Liste </a></td>
 
@@ -121,15 +129,15 @@ class __TwigTemplate_fa8e0dd250831324ca78ed558b11aa7ccc0543a116a4a1ecec61a22e9ee
  
        
 ";
-        // line 58
+        // line 63
         echo "
   ";
     }
 
-    // line 60
+    // line 65
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 61
+        // line 66
         echo " <script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/gvforum/ckeditor/ckeditor.js"), "html", null, true);
         echo " \"> </script>
@@ -148,7 +156,7 @@ class __TwigTemplate_fa8e0dd250831324ca78ed558b11aa7ccc0543a116a4a1ecec61a22e9ee
 
     public function getDebugInfo()
     {
-        return array (  133 => 61,  130 => 60,  125 => 58,  116 => 50,  112 => 49,  109 => 48,  95 => 40,  91 => 39,  87 => 38,  80 => 34,  77 => 33,  73 => 32,  52 => 14,  45 => 10,  38 => 6,  35 => 5,  29 => 2,  11 => 1,);
+        return array (  141 => 66,  138 => 65,  133 => 63,  124 => 55,  120 => 54,  117 => 53,  103 => 45,  99 => 44,  95 => 43,  88 => 39,  85 => 38,  81 => 37,  59 => 18,  53 => 15,  45 => 10,  38 => 6,  35 => 5,  29 => 2,  11 => 1,);
     }
 }
 /*     {% extends '::base.html.twig' %}*/
@@ -160,12 +168,17 @@ class __TwigTemplate_fa8e0dd250831324ca78ed558b11aa7ccc0543a116a4a1ecec61a22e9ee
 /* */
 /* */
 /* <div class="item">*/
-/*     <img src="{{ asset(entity.image.AssetPath)}}" width="300" height="150">*/
+/*     <img src="{{ asset(entity.image.AssetPath)}}" >*/
+/*    */
 /*     <div class="item-overlay top"></div>*/
 /* </div>*/
+/*     <div id="tt" >*/
+/*         <video id="video1" width="500" src="{{asset('uploads/' ~ entity.v.path)}}"controls ></video>*/
+/*     </div>*/
 /*     <p align="center">*/
 /*     Conteu :{{entity.Contenu|raw}} */
 /* </p>*/
+/* */
 /* */
 /* <table border=2>*/
 /*     <tr>*/

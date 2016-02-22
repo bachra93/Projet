@@ -29,15 +29,12 @@ class __TwigTemplate_55298415cabac4cd270f8a0b98166df5424356d7636cfc742d2f202b867
     {
         // line 3
         echo "<div class=\"blog-grids\">
-  
+ 
 \t\t\t\t<div class=\"wrap\">
 \t\t\t\t\t<div class=\"blog-grids-head\">
-\t\t\t\t\t\t
+\t\t\t\t\t\t     
 \t\t\t\t\t</div>
-                                          <a href=\"";
-        // line 9
-        echo $this->env->getExtension('routing')->getPath("Ajouter_poste");
-        echo " \">Ajouter</a>
+                                   
                                           ";
         // line 10
         $context['_parent'] = $context;
@@ -102,7 +99,10 @@ class __TwigTemplate_55298415cabac4cd270f8a0b98166df5424356d7636cfc742d2f202b867
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['postes'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 46
-        echo "\t\t\t\t\t
+        echo "                                     <a href=\"";
+        echo $this->env->getExtension('routing')->getPath("Ajouter_poste");
+        echo " \" class=\"btn\">Ajoutfer</a>
+\t\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -121,18 +121,18 @@ class __TwigTemplate_55298415cabac4cd270f8a0b98166df5424356d7636cfc742d2f202b867
 
     public function getDebugInfo()
     {
-        return array (  105 => 46,  90 => 37,  86 => 36,  80 => 33,  70 => 26,  61 => 20,  55 => 17,  47 => 11,  43 => 10,  39 => 9,  31 => 3,  28 => 2,  11 => 1,);
+        return array (  102 => 46,  87 => 37,  83 => 36,  77 => 33,  67 => 26,  58 => 20,  52 => 17,  44 => 11,  40 => 10,  31 => 3,  28 => 2,  11 => 1,);
     }
 }
 /*     {% extends '::base.html.twig' %}*/
 /*       {% block body %}*/
 /* <div class="blog-grids">*/
-/*   */
+/*  */
 /* 				<div class="wrap">*/
 /* 					<div class="blog-grids-head">*/
-/* 						*/
+/* 						     */
 /* 					</div>*/
-/*                                           <a href="{{path("Ajouter_poste")}} ">Ajouter</a>*/
+/*                                    */
 /*                                           {% for postes in postes  %}*/
 /* 					<div class="blog-grids-box">*/
 /*                                          */
@@ -169,6 +169,7 @@ class __TwigTemplate_55298415cabac4cd270f8a0b98166df5424356d7636cfc742d2f202b867
 /* 						<div class="clear"> </div>*/
 /* 					</div>*/
 /*                                         {% endfor %}*/
+/*                                      <a href="{{path("Ajouter_poste")}} " class="btn">Ajoutfer</a>*/
 /* 					*/
 /* 				</div>*/
 /* 			</div>*/

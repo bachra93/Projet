@@ -47,7 +47,7 @@ class __TwigTemplate_0a88d343fd178f6bdba280a84cbc0bf87646caa6f7e17383866e285d232
         // line 11
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), "date_p", array()), 'widget', array("attr" => array("style" => "display:none")));
         echo "
-    <button type=\"submit\" class=\"btn\">Ajouter</button>
+    <button type=\"submit\" class=\"btn\">Ajojuter</button>
    
     ";
         // line 14
@@ -94,7 +94,7 @@ class __TwigTemplate_0a88d343fd178f6bdba280a84cbc0bf87646caa6f7e17383866e285d232
 /*       {{ form_widget(f.Body)}}*/
 /*    */
 /*     {{ form_widget(f.date_p,{'attr': {'style': 'display:none'}})}}*/
-/*     <button type="submit" class="btn">Ajouter</button>*/
+/*     <button type="submit" class="btn">Ajojuter</button>*/
 /*    */
 /*     {{ form_widget(f) }}*/
 /* </form>*/

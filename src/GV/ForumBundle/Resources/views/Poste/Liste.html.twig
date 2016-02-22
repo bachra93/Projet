@@ -1,12 +1,12 @@
     {% extends '::base.html.twig' %}
       {% block body %}
 <div class="blog-grids">
-  
+ 
 				<div class="wrap">
 					<div class="blog-grids-head">
-						
+						     
 					</div>
-                                          <a href="{{path("Ajouter_poste")}} ">Ajouter</a>
+                                   
                                           {% for postes in postes  %}
 					<div class="blog-grids-box">
                                          
@@ -43,6 +43,7 @@
 						<div class="clear"> </div>
 					</div>
                                         {% endfor %}
+                                     <a href="{{path("Ajouter_poste")}} " class="btn">Ajoutfer</a>
 					
 				</div>
 			</div>
