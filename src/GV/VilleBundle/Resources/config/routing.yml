@@ -1,0 +1,35 @@
+gv_ville_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GVVilleBundle:Default:index }
+AjouterVille:
+    path:    /ajouter
+    defaults: { _controller: GVVilleBundle:Ville:ajouterVille}
+DeleteVille:
+    path:    /supprimer/{id}
+    defaults: { _controller: GVVilleBundle:Ville:SupprimerVille}
+UpdateVille:
+    path:    /modifier/{id}
+    defaults: { _controller: GVVilleBundle:Ville:ModifierVille}
+afficherVille:
+    path:    /afficher
+    defaults: { _controller: GVVilleBundle:Ville:afficherVille}
+rechercherVille:
+    path:    /rechercher
+    defaults: { _controller: GVVilleBundle:Ville:RechercherVille}
+    
+Afficherdetails:
+    path:    /afficherdetails/{id}
+    defaults: { _controller: GVVilleBundle:Ville:afficherdetails}
+    
+afficherVillefront:
+    path:    /afficherfro
+    defaults: { _controller: GVVilleBundle:Ville:frontRechercherVille}
+    
+afficherdetailsVillefront:
+    path:    /afficherdetailsfro/{id}
+    defaults: { _controller: GVVilleBundle:Ville:afficherdetailsfront}
+    
+rechercherfrontVille:
+    path:    /rechercherfront
+    defaults: { _controller: GVVilleBundle:Ville:frontRechercherVille}
+

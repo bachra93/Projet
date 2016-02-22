@@ -1,0 +1,36 @@
+{# empty Twig template #}
+<h1> Liste des villes est: </h1>
+<table border='1'>
+    <tr>
+        <td> ID </td>
+        <td> Nom </td>
+        <td> Pays </td> 
+        <td> Latitude </td>
+        <td> Longitude  </td>
+        <td> Description </td>
+        <td> Type </td>
+        <td> langue </td>
+        <td> Image </td>
+    </tr>
+    
+ {% for m in mods %}   
+    <tr>
+        <td>{{m.id}} </td>
+        <td>{{m.nom}} </td>
+        <td>{{m.pays}}</td>
+        <td>{{m.latitude}}</td>
+        <td>{{m.longitude}} </td>
+        <td>{{m.description}}</td>
+        <td>{{m.type}}</td>
+         <td>{{m.langue}}</td>
+        <td>{{m.image}}</td>
+        <td><a href="{{path("DeleteVille",{'id':m.id})}}"> supprimer </a></td>
+        <td><a href="{{path("UpdateVille",{'id':m.id})}}"> modifier </a></td>
+        <td><a href="{{path("Afficherdetails",{'id':m.id})}}"> afficher details </a></td>
+    </tr>
+  {% endfor %}  
+  
+    
+</table>
+  
+ 

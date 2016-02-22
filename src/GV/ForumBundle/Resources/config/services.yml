@@ -1,0 +1,4 @@
+services:
+#    gv_forum.example:
+#        class: GV\ForumBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

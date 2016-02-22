@@ -1,0 +1,62 @@
+    {% extends '::base.html.twig' %}
+  {% block body %}gg
+  
+  {# empty Twig template #}
+
+  <div id="h">Titre: {{entity.Titre}}</div>
+
+
+<div class="item">
+    <img src="{{ asset(entity.image.AssetPath)}}" width="300" height="150">
+    <div class="item-overlay top"></div>
+</div>
+    <p align="center">
+    Conteu :{{entity.Contenu|raw}} 
+</p>
+
+<table border=2>
+    <tr>
+         
+        
+        <td>Comment</td>
+        <td>Date</td>
+        <td>Modifier</td>
+        
+    </tr>
+
+<tr>
+
+   
+
+     
+{% for poste in entities %}
+
+    <td>   {{poste.body|raw}} </td>
+     
+    
+   
+    <td> {{poste.date_p|date('Y-m-d H:i:s')}} </td>
+    <td><a class="btn2"  href="{{path("Modifier_commentaire",{'id': poste.id})}} ">Modifier </a></td>
+    <td><a class="btn2"  href="{{path("Supprimer_commentaire",{'id': poste.id})}} ">Supprimer </a></td>
+   
+    
+        
+     
+</tr>
+
+ {% endfor %}
+ 
+  <td><a class="btn"  href="{{path("Ajouter_commentaire",{'id': entity.id})}} ">Replay </a></td>
+    <td><a class="btn"  href="{{path("Liste_poste")}} ">Liste </a></td>
+
+ 
+    </table>
+ 
+       
+{# empty Twig template #}
+{# empty Twig template #}
+
+  {% endblock %}
+   {% block javascripts %}
+ <script src="{{ asset('bundles/gvforum/ckeditor/ckeditor.js') }} "> </script>
+ {% endblock %}

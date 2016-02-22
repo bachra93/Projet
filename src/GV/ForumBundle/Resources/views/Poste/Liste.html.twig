@@ -1,0 +1,50 @@
+    {% extends '::base.html.twig' %}
+      {% block body %}
+<div class="blog-grids">
+  
+				<div class="wrap">
+					<div class="blog-grids-head">
+						
+					</div>
+                                          <a href="{{path("Ajouter_poste")}} ">Ajouter</a>
+                                          {% for postes in postes  %}
+					<div class="blog-grids-box">
+                                         
+                                 
+						<div class="blog-grid">
+							<div class="blog-poast-head">
+								<div class="blog-art-pic">
+									<a class="post-pic" href="#">  <img src="{{ asset(postes.image.AssetPath)}}" width="300" height="150"></a>
+								</div>
+								<div class="blog-poast-admin">
+									<a href="#"><img src="{{asset('images/admin-pic2.png')}}" title="admin" /></a>
+								</div>
+								
+								<div class="blog-poast-info">
+									<ul>
+										<li><a class="admin" href="#"><span> </span> User </a></li>
+										<li><a class="p-date" href="#"><span> </span>{{postes.date_published|date('Y-m-d H:i:s')}} </a></li>
+										<li><a class="p-blog" href="#"><span> </span>Blog</a></li>
+										<div class="clear"> </div>
+									</ul>
+								</div>
+								</div>
+								<div class="blog-info">
+									<h3><a href="#">{{postes.Titre}}</a></h3>
+									
+                                                                        
+                                                                            <a class="btn"  href="{{path("Liste_commentaire",{'id': postes.id})}} ">Voir </a>
+                                                                            <a class="btn" href="{{path("Supprimer_poste",{'id': postes.id})}} ">Supprimer </a>
+								</div>
+						</div>
+						
+						
+						
+						<div class="clear"> </div>
+					</div>
+                                        {% endfor %}
+					
+				</div>
+			</div>
+		</div>
+                 {% endblock %}

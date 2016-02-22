@@ -1,0 +1,32 @@
+gv_forum_homepage:
+    path:     /hello
+    defaults: { _controller: GVForumBundle:Default:index }
+    
+    
+Ajouter_commentaire:
+    path:     /ajouterc/{id}
+    defaults: { _controller: GVForumBundle:Commentaire:ajouter }
+    
+Liste_commentaire:
+    path:     /listec/{id}
+    defaults: { _controller: GVForumBundle:Commentaire:Liste }
+
+Liste_poste:
+    path:     /
+    defaults: { _controller: GVForumBundle:Poste:liste }
+    
+Ajouter_poste:
+    path:     /ajouterp
+    defaults: { _controller: GVForumBundle:Poste:ajouter }
+    
+Modifier_commentaire:
+    path:     /modifier/{id}
+    defaults: { _controller: GVForumBundle:Commentaire:Modifier }
+    
+Supprimer_poste:
+    path:     /supprimerp/{id}
+    defaults: { _controller: GVForumBundle:Poste:Supprimer }
+    
+Supprimer_commentaire:
+    path:     /supprimerc/{id}
+    defaults: { _controller: GVForumBundle:Commentaire:Supp }

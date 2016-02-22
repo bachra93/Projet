@@ -1,0 +1,23 @@
+  {% extends '::base.html.twig' %}
+      {% block body %}
+          <div id="h">Ajojuter commentaire</div>
+
+<form action="" method="POST" >
+   
+    {{ form_widget(f.id,{'attr': {'style': 'display:none','value':'6'}}) }}
+   
+      {{ form_widget(f.Body)}}
+   
+    {{ form_widget(f.date_p,{'attr': {'style': 'display:none'}})}}
+    <button type="submit" class="btn">Ajojuter</button>
+   
+    {{ form_widget(f) }}
+</form>
+
+        {% endblock %}
+         {% block javascripts %}
+ <script src="{{ asset('bundles/gvforum/ckeditor/ckeditor.js') }} "> </script>
+ {% endblock %}
+
+
+{# empty Twig template #}

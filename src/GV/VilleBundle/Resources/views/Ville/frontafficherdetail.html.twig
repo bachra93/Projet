@@ -1,0 +1,117 @@
+{# empty Twig template #}
+{% extends '::base.html.twig' %}
+{% block body %}
+<body>	
+	<!-- iciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+	<div class="banner-bottom">
+		<!-- container -->
+		<div class="container">
+			<div class="faqs-top-grids">
+				<!--single-page-->
+				<div class="single-page">
+				
+<!--la partie des imagessssssssssssssssssssssssssssssssssssss-->
+						<div class="col-md-8 single-gd-lt">
+							<div class="single-pg-hdr">
+								<h2>{{modeles.nom}}</h2>
+								<p>{{modeles.pays}}</p>
+								<p>Jump to: <a href="#">Over View</a>|<a href="#">Room Choices</a>|<a href="#">Hotel Information</a></p>
+							</div>
+							<div class="flexslider">
+											<ul class="slides">
+												<li data-thumb="images/p1.jpg">
+													<img src="{{asset('images/p1.jpg')}}" alt=""/>
+												</li>
+												<li data-thumb="images/p2.jpg">
+													<img src="{{asset('images/p2.jpg')}}" alt=""/>
+												</li>
+						
+											</ul>
+							</div>
+										<!-- FlexSlider -->
+									<script defer src="{{asset('js/jquery.flexslider.js')}}"></script>
+										<script>
+										// Can also be used with $(document).ready()
+										$(window).load(function() {
+										  $('.flexslider').flexslider({
+											animation: "slide",
+											controlNav: "thumbnails"
+										  });
+										});
+										</script>
+
+						</div>
+						
+<!--la partie des imagessssssssssssssssssssssssssssssssssssss-->
+						
+
+<!--la partie de la mapppppppppppppppppppppppppppppppppppppppppp-->						
+<div class="col-md-4 single-gd-rt">
+							<div class="spl-btn">
+								<div class="spl-btn-bor">
+									<a href="#">
+										<span class="glyphicon glyphicon-tag" aria-hidden="true"></span>											
+									</a>
+									<p>Special Offer</p>	
+									<script>
+										$(document).ready(function(){
+										$('[data-toggle="tooltip"]').tooltip();   
+										});
+									</script>
+								</div>
+								<div class="sp-bor-btn text-right">
+									<h4><span>$8,750</span> $4,850</h4>
+									<p class="best-pri">Best price</p>
+									<a class="best-btn" href="booking.html">Book Now</a>
+								</div>
+							</div>
+    
+							<div class="map-gd">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63718.72916803739!2d102.31975295000002!3d3.489618449999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31ceba2007355f81%3A0xd2ff1ad6a3ca801!2sMentakab%2C+Pahang%2C+Malaysia!5e0!3m2!1sen!2sin!4v1439535856431"></iframe>
+							</div>
+                                                    
+                                                    
+ <!--partie de ashref et bachraaaaaaaaaaaaaaaaaaa-->    
+							<div class="other-comments">
+								<div class="comments-head">
+									<h3>Excellent</h3>
+									<p>4.5/5</p>
+									<div class="clearfix"></div>
+								</div>
+								<div class="comments-bot">
+									<p>"Vestibulum ullamcorper condimentum luctus. Ut ullamcorper elit eu auctor commodo."</p>
+									<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> John Doe</h4>
+								</div>
+								<div class="comments-bot">
+									<p>"Aliquam non purus quis tellus varius egestas ut vitae tellus. Pellentesque non est ac tortor maximus imperdiet at id quam."</p>
+									<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Luther</h4>
+								</div>
+								<div class="comments-bot">
+									<p>"Vestibulum sapien quam, interdum quis bibendum quis, malesuada a nisi. Proin at blandit justo."</p>
+									<h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Patrick</h4>
+								</div>
+							</div>
+  <!--partie de ashref et bachraaaaaaaaaaaaaaaaaaa-->
+</div>
+<!--la partie de la mapppppppppppppppppppppppppppppppppppppppppp-->		
+						<div class="clearfix"></div>
+				</div>
+				<!--//single-page-->
+			</div>
+			
+		</div>
+		<!-- //container -->
+	</div>
+	
+	
+	<!-- iciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+
+
+	
+
+	<script defer src="{{asset('js/jquery.flexslider.js')}}"></script>
+	<script src="{{asset('js/easyResponsiveTabs.js')}}" type="text/javascript"></script>
+	<script src="{{asset('js/jquery-ui.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/script.js')}}"></script>	
+</body>
+ {% endblock %}

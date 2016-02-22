@@ -1,0 +1,17 @@
+services:
+  # [...] Vos autres services
+  redirect.after.login:
+    class: GV\UserBundle\Redirection\AfterLoginRedirection
+    arguments: [@router]
+  redirect.after.logout:
+    class:  GV\UserBundle\Redirection\AfterLogoutRedirection
+    arguments: [@router, @security.context]
+  redirect.after.denied :
+    class:  GV\UserBundle\Redirection\AfterDeniedRedirection
+    arguments: [@router ,@security.context]
+
+  User.registration.form:
+        class:  GV\UserBundle\Form\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: user_registration }

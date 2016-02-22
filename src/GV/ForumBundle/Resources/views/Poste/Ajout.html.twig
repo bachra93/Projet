@@ -1,0 +1,26 @@
+    {% extends '::base.html.twig' %}
+      {% block body %}
+<div id="h">Ajouter un Poste </div>
+
+    <form action='' method="post"  {{ form_enctype(f) }}>
+        <p align="center">{{ form_widget(f.id,{'attr': {'style': 'display:none','value':'6'}})}}</p>
+       
+        <p align="center"> {{ form_widget(f.Titre, { 'attr': {'class': 'form-control'} }) }}</p>
+       <p class="span12"  >
+ {{ form_widget(f.Contenu) }}
+       </p>
+    
+        <p align="center">{{ form_widget(f.date_published ,{'attr': {'style': 'display:none'}}) }}</p>
+     
+    <p align="center">sqdqsd{{ form_widget(f.image.name, { 'attr': {'class': 'form-control'} }) }}</p>
+     <p align="center">sqdqsd{{ form_widget(f.image.file) }}</p>
+ 
+      {{ form(f) }}
+
+    
+</form>
+
+    {% endblock %}
+    {% block javascripts %}
+ <script src="{{ asset('bundles/gvforum/ckeditor/ckeditor.js') }} "> </script>
+ {% endblock %}

@@ -1,0 +1,42 @@
+gv_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GVUserBundle:Default:index }
+erreur:
+    path:     /erreur
+    defaults: { _controller: GVUserBundle:Default:erreur } 
+
+accueil:
+    path:     /accueil
+    defaults: { _controller: GVUserBundle:Default:accueil}
+modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: GVUserBundle:Default:modifierAbonne}
+detail_Abonne:
+    path:     /detail
+    defaults: { _controller: GVUserBundle:Default:detailAbonne}
+afficher_ab:
+    path:     /afficher_ab
+    defaults: { _controller: GVUserBundle:Default:afficher}
+gv_user_mail_succ:
+    path: /succ
+    defaults: { _controller: GVUserBundle:Mail:index }
+gv_user_mail_form:
+    path: /mail
+    defaults: { _controller: GVUserBundle:Mail:new }
+gv_user_mail_sendpage:
+    path: /sendmail
+    defaults: { _controller: GVUserBundle:Mail:sendMail }
+affiche_detail_compte:
+    path:     /admin/detailCompte/{id}
+    defaults: { _controller: GVUserBundle:Admin:aficherDetailCompte }  
+
+choix_admin_compte:
+    path:     /admin/choix_admin_compte/{choix}/{id}
+    defaults: { _controller: GVUserBundle:Admin:choixAdminCompte }  
+afficher_compte_admin:
+    path:     /admin/afficherCompte
+    defaults: { _controller: GVUserBundle:Admin:afficherCompteDash}
+
+cher:
+    path:     /admin/recherche
+    defaults: { _controller: GVUserBundle:Admin:recherche }

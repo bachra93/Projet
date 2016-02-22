@@ -1,0 +1,4 @@
+services:
+#    gv_ville.example:
+#        class: GV\VilleBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

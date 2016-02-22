@@ -1,0 +1,49 @@
+{# empty Twig template #}
+<form method="post" action=''>
+<table>
+
+<tr>
+    <td>nom</td>
+    <td>{{form_widget(f.nom) }}</td>
+<tr>
+    <td>pays</td>
+    <td>{{form_widget(f.pays) }}</td>
+</tr>
+<tr>
+    <td>latitude</td>
+    <td>{{form_widget(f.latitude) }}</td>
+</tr>
+<tr>
+    <td>longitude</td>
+    <td>{{form_widget(f.longitude) }}</td>
+</tr>
+</tr>
+<tr>
+    <td>description</td>
+    <td>{{form_widget(f.description) }}</td>
+</tr>
+<tr>
+    <td>type</td>
+    <td>{{form_widget(f.type) }}</td>
+</tr>
+
+<tr>
+    <td>langue</td>
+    <td>{{form_widget(f.langue) }}</td>
+</tr>
+<tr>
+    <td>image</td>
+    <td>{{form_widget(f.image) }}</td>
+</tr>
+
+
+</table>
+     <input type='submit' value='ajouter'>
+{{form_rest(f)}}
+
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+</form>
